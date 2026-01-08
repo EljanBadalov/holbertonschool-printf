@@ -1,8 +1,7 @@
-.TH _printf "22 Nov 2022" "3.1" "man page of _printf function"
-.SH _PRINTF()
+.TH _PRINTF 3 "22 Nov 2022" "Holberton School" "_printf manual"
 
 .SH NAME
-.B _printf - function that produces output according to a format
+_printf \- produces output according to a format
 
 .SH SYNOPSIS
 .B #include "main.h"
@@ -11,9 +10,10 @@
 
 .SH DESCRIPTION
 
-- _printf() function produces output according to the format. It uses a specific function according to receipt format in order to display the result in the correct format.
+_printf() produces output according to a format string.
+It writes output to standard output.
 
-The available convertion specifiers are:
+The available conversion specifiers are:
 
 .br
 %c: Prints a single character.
@@ -26,28 +26,31 @@ The available convertion specifiers are:
 .br
 %b: Prints the binary representation of an unsigned decimal.
 .br
-%u: Prints unsigned integers
+%u: Prints unsigned integers.
 .br
-%x: Prints the hexadecial representation of an unsigned decimal in lowercase letters
+%x: Prints the hexadecimal representation of an unsigned decimal in lowercase letters
 .br
-%X:Prints the hexadecial representation of an unsigned decimal in uppercase letters
+%X: Prints the hexadecimal representation of an unsigned decimal in uppercase letters
+.br
 %r: Prints a reversed string
 .br
 %R: Prints the Rot13 interpretation of a string
 
-.SH RETURN
--if successful, these functions return the number of characters printed (excluding the null byte).If the null return is unsuccessful, -1 is returned.
+.SH RETURN VALUE
+If successful, _printf() returns the number of characters printed
+(excluding the null byte). On error, -1 is returned.
 
 
 .SH EXAMPLE
-.Ip
-_printf("This is a simple printf %s made in %d ", "Function", 2022);
-.IP
-$ "This is a simple printf Function made in 2022"
-.br
+.EX
+_printf("This is a simple printf %s made in %d", "Function", 2022);
+.EE
 
 .SH BUGS
-No detected so far. Please report any to cestrad5@gmail.com
+No known bugs.
+
+.SH SEE ALSO
+printf(3)
 
 .SH AUTHOR
-Luis Alejandro Puerta / Obed Rayo / Camilo Estrada
+Written by Holberton School students.
